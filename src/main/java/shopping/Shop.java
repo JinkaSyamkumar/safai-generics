@@ -15,5 +15,7 @@ public class Shop {
     ClothingPair<Shoe> ps2 =
         new ClothingPair<>(new Shoe(40, "Red"), new Shoe(40, "Green"));
     System.out.println("other shoes match ? " + ps2.matched());
+    System.out.println("Shoes match? "
+        + ClothingPair./*<Shoe>*/matches(new Shoe(40, "Red"), new Shoe(40, "Green")));
   }
 }

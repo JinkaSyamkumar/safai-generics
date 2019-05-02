@@ -8,6 +8,13 @@ public class ClothingPair<E extends Object & Sized & Colored/*, String*/> extend
     super(left, right);
   }
 
+  public static <E extends Sized & Colored> boolean matches(E left, E right) {
+    return left.getSize() == right.getSize()
+        && left.getColor().equals(right.getColor());
+  }
+
+//  public static <E, F extends E> void doStuff() {}
+
   public boolean matched() {
     return left.getSize() == right.getSize()
         && left.getColor().equals(right.getColor());
